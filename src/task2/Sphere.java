@@ -1,7 +1,7 @@
 package task2;
 
 public class Sphere extends VolumetricFigures {
-    private double radius;
+    private final double radius;
 
     public Sphere(double radius) {
 

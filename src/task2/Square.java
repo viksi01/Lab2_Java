@@ -1,7 +1,7 @@
 package task2;
 
 public class Square extends FlatFigures {
-    private double side;
+    private final double side;
 
     public Square(double side) {
         this.side = side;

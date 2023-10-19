@@ -1,9 +1,9 @@
 package task2;
 
 public class Pyramid extends VolumetricFigures {
-    double baseArea;
-    double sideArea;
-    double height;
+    private final double baseArea;
+    private final double sideArea;
+    private final double height;
 
     public Pyramid(double baseArea, double sideArea, double height) {
         this.baseArea = baseArea;
@@ -19,6 +19,6 @@ public class Pyramid extends VolumetricFigures {
 
     @Override
     public double volume() {
-        return 1 / 3 * baseArea * height;
+        return (double) 1 / 3 * baseArea * height;
     }
 }

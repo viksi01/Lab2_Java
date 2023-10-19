@@ -1,8 +1,8 @@
 package task2;
 
 public class Rectangle extends FlatFigures {
-    private double length;
-    private double width;
+    private final double length;
+    private final double width;
 
     public Rectangle(double length, double width) {
         this.length = length;

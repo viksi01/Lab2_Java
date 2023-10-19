@@ -11,6 +11,6 @@ public class Triangle extends FlatFigures {
 
     @Override
     public double area() {
-        return 1 / 2 * side * height;
+        return (double) 1 / 2 * side * height;
     }
 }

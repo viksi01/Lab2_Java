@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
 public class Airline {
-    List<Airport> airports = new ArrayList<>();
-    List<Plane> planes = new ArrayList<>();
-    List<Flight> flights = new ArrayList<>();
-    List<Passenger> passengers = new ArrayList<>();
-    List<Ticket> tickets = new ArrayList<>();
+    private final List<Airport> airports = new ArrayList<>();
+    private final List<Plane> planes = new ArrayList<>();
+    final List<Flight> flights = new ArrayList<>();
+    private final List<Passenger> passengers = new ArrayList<>();
+    private final List<Ticket> tickets = new ArrayList<>();
 
     public void addAirport(Airport airport) {
         airports.add(airport);
@@ -19,7 +19,7 @@ public class Airline {
         airports.remove(airport);
     }
 
-    public void editAirport(Airport airport, String city) {
+    public void editAirport(final Airport airport, String city) {
         airport.setCity(city);
     }
     public void addPlane(Plane plane) {
@@ -30,7 +30,7 @@ public class Airline {
         planes.remove(plane);
     }
 
-    public void editPlane(Plane plane, int capacity) {
+    public void editPlane(final Plane plane, int capacity) {
         plane.setCapacity(capacity);
     }
 
@@ -42,7 +42,7 @@ public class Airline {
         flights.remove(flight);
     }
 
-    public void editFlight(Flight flight, LocalDateTime departureTime,
+    public void editFlight(final Flight flight, LocalDateTime departureTime,
                            LocalDateTime arrivalTime) {
         flight.setDepartureTime(departureTime);
         flight.setArrivalTime(arrivalTime);
@@ -56,7 +56,7 @@ public class Airline {
         passengers.remove(passenger);
     }
 
-    public void editPassenger(Passenger passenger, String firstName, String lastName) {
+    public void editPassenger(final Passenger passenger, final String firstName, final String lastName) {
         passenger.setFirstName(firstName);
         passenger.setLastName(lastName);
     }

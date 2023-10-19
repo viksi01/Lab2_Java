@@ -5,7 +5,7 @@ public class Ticket {
     private Passenger passenger;
     private int price;
 
-    public Ticket(Flight flight, Passenger passenger, int price) {
+    public Ticket(final Flight flight, final Passenger passenger, int price) {
         this.flight = flight;
         this.passenger = passenger;
         this.price = price;

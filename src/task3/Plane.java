@@ -2,7 +2,7 @@ package task3;
 
 public class Plane {
     private int capacity;
-    public Plane(int capacity) {
+    public Plane(final int capacity) {
         this.capacity = capacity;
     }
 

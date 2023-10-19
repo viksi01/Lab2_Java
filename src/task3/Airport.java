@@ -2,7 +2,7 @@ package task3;
 
 public class Airport {
     private String city;
-    public Airport(String city) {
+    public Airport(final String city) {
         this.city = city;
     }
 

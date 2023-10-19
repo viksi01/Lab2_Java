@@ -1,7 +1,7 @@
 package task2;
 
 public class Circle extends FlatFigures {
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
 

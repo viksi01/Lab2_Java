@@ -1,7 +1,7 @@
 package task2;
 
 public class Cube extends VolumetricFigures {
-    private double side;
+    private final double side;
 
     public Cube(double side) {
         this.side = side;

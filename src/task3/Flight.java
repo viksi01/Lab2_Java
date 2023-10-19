@@ -8,7 +8,7 @@ public class Flight {
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
 
-    public Flight(Airport departure, Airport arrival, LocalDateTime departureTime, LocalDateTime arrivalTime) {
+    public Flight(final Airport departure, final Airport arrival, final LocalDateTime departureTime, final LocalDateTime arrivalTime) {
         this.departure = departure;
         this.arrival = arrival;
         this.departureTime = departureTime;
