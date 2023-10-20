@@ -45,7 +45,6 @@ public class Main {
         LocalDate end = LocalDate.of(2023, 12, 10);
 
         airline.income(begin, end);
-
         airline.flightSchedule();
 
 
