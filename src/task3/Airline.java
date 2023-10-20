@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 public class Airline {
     private final List<Airport> airports = new ArrayList<>();
     private final List<Plane> planes = new ArrayList<>();
-    final List<Flight> flights = new ArrayList<>();
+    private final List<Flight> flights = new ArrayList<>();
     private final List<Passenger> passengers = new ArrayList<>();
     private final List<Ticket> tickets = new ArrayList<>();
 
@@ -88,9 +88,13 @@ public class Airline {
 
         return income;
     }
-    public String flightSchedule(Flight flight){
-        return "Departure: " + flight.getDeparture().getCity() + " " + "at" + " " + flight.getDepartureTime() + " "
-                + "Ariving: " + flight.getArrival().getCity() + " " +  "at" + " " + flight.getArrivalTime();
+    public void flightSchedule(){
+        System.out.println("Flights:");
+        for (Flight flight : flights) {
+            System.out.println("Departure: " + flight.getDeparture().getCity() + " " + "at" + " " + flight.getDepartureTime() + " "
+                    + "Ariving: " + flight.getArrival().getCity() + " " +  "at" + " " + flight.getArrivalTime());
+        }
+
     }
 
 }

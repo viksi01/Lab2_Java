@@ -44,13 +44,9 @@ public class Main {
         LocalDate begin = LocalDate.of(2021, 1, 1);
         LocalDate end = LocalDate.of(2023, 12, 10);
 
-        System.out.println(airline.income(begin, end));
+        airline.income(begin, end);
 
-        System.out.println("Flights:");
-        for (Flight flight : airline.flights) {
-
-            System.out.println(airline.flightSchedule(flight));
-        }
+        airline.flightSchedule();
 
 
     }
