@@ -10,7 +10,7 @@ public class Plane {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
+    public void setCapacity(final int capacity) {
         this.capacity = capacity;
     }
 

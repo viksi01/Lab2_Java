@@ -11,48 +11,48 @@ public class Airline {
     private final List<Passenger> passengers = new ArrayList<>();
     private final List<Ticket> tickets = new ArrayList<>();
 
-    public void addAirport(Airport airport) {
+    public void addAirport(final Airport airport) {
         airports.add(airport);
     }
 
-    public void removeAirport(Airport airport) {
+    public void removeAirport(final Airport airport) {
         airports.remove(airport);
     }
 
-    public void editAirport(final Airport airport, String city) {
+    public void editAirport(final Airport airport, final String city) {
         airport.setCity(city);
     }
-    public void addPlane(Plane plane) {
+    public void addPlane(final Plane plane) {
         planes.add(plane);
     }
 
-    public void removePlane(Plane plane) {
+    public void removePlane(final Plane plane) {
         planes.remove(plane);
     }
 
-    public void editPlane(final Plane plane, int capacity) {
+    public void editPlane(final Plane plane, final int capacity) {
         plane.setCapacity(capacity);
     }
 
-    public void addFlight(Flight flight) {
+    public void addFlight(final Flight flight) {
         flights.add(flight);
     }
 
-    public void removeFlight(Flight flight) {
+    public void removeFlight(final Flight flight) {
         flights.remove(flight);
     }
 
-    public void editFlight(final Flight flight, LocalDateTime departureTime,
-                           LocalDateTime arrivalTime) {
+    public void editFlight(final Flight flight, final LocalDateTime departureTime,
+                           final LocalDateTime arrivalTime) {
         flight.setDepartureTime(departureTime);
         flight.setArrivalTime(arrivalTime);
     }
 
-    public void addPassenger(Passenger passenger) {
+    public void addPassenger(final Passenger passenger) {
         passengers.add(passenger);
     }
 
-    public void removePassenger(Passenger passenger) {
+    public void removePassenger(final Passenger passenger) {
         passengers.remove(passenger);
     }
 
@@ -60,7 +60,7 @@ public class Airline {
         passenger.setFirstName(firstName);
         passenger.setLastName(lastName);
     }
-    public void ticketPurchase(Ticket ticket, Plane plane) {
+    public void ticketPurchase(final Ticket ticket, final Plane plane) {
         if (plane.getCapacity() == tickets.size()) {
             System.out.println("Plane is full");
             return;
@@ -68,17 +68,17 @@ public class Airline {
         tickets.add(ticket);
     }
 
-    public void removeTicket(Ticket ticket) {
+    public void removeTicket(final Ticket ticket) {
         tickets.remove(ticket);
     }
 
 
-    public int income(LocalDate begin, LocalDate end) {
+    public int income(final LocalDate begin, final LocalDate end) {
         int income = 0;
-        for (Flight flight : flights) {
+        for (final Flight flight : flights) {
             if((flight.getDepartureTime().toLocalDate().isAfter(begin)) &&
                     (flight.getDepartureTime().toLocalDate().isBefore(end))) {
-                for (Ticket ticket : tickets) {
+                for (final Ticket ticket : tickets) {
                     if (ticket.getFlight().equals(flight)) {
                         income += ticket.getPrice();
                     }
@@ -90,7 +90,7 @@ public class Airline {
     }
     public void flightSchedule(){
         System.out.println("Flights:");
-        for (Flight flight : flights) {
+        for (final Flight flight : flights) {
             System.out.println("Departure: " + flight.getDeparture().getCity() + " " + "at" + " " + flight.getDepartureTime() + " "
                     + "Ariving: " + flight.getArrival().getCity() + " " +  "at" + " " + flight.getArrivalTime());
         }

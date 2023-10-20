@@ -5,7 +5,8 @@ public class Ticket {
     private Passenger passenger;
     private int price;
 
-    public Ticket(final Flight flight, final Passenger passenger, int price) {
+
+    public Ticket(final Flight flight, final Passenger passenger, final int price) {
         this.flight = flight;
         this.passenger = passenger;
         this.price = price;
@@ -14,7 +15,7 @@ public class Ticket {
         return flight;
     }
 
-    public void setFlight(Flight flight) {
+    public void setFlight(final Flight flight) {
         this.flight = flight;
     }
 
@@ -22,7 +23,7 @@ public class Ticket {
         return passenger;
     }
 
-    public void setPassenger(Passenger passenger) {
+    public void setPassenger(final Passenger passenger) {
         this.passenger = passenger;
     }
 
@@ -30,7 +31,7 @@ public class Ticket {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(final int price) {
         this.price = price;
     }
 

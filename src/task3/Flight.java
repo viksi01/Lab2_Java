@@ -19,7 +19,7 @@ public class Flight {
         return departureTime;
     }
 
-    public void setDepartureTime(LocalDateTime departureTime) {
+    public void setDepartureTime(final LocalDateTime departureTime) {
 
         this.departureTime = departureTime;
     }
@@ -28,7 +28,7 @@ public class Flight {
         return arrivalTime;
     }
 
-    public void setArrivalTime(LocalDateTime arrivalTime) {
+    public void setArrivalTime(final LocalDateTime arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 
@@ -36,7 +36,7 @@ public class Flight {
         return departure;
     }
 
-    public void setDeparture(Airport departure) {
+    public void setDeparture(final Airport departure) {
         this.departure = departure;
     }
 
@@ -44,7 +44,7 @@ public class Flight {
         return arrival;
     }
 
-    public void setArrival(Airport arrival) {
+    public void setArrival(final Airport arrival) {
         this.arrival = arrival;
     }
 
